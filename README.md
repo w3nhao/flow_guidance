@@ -98,18 +98,19 @@ wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
 mkdir ~/.mujoco
 tar -xvzf mujoco210-linux-x86_64.tar.gz -C ~/.mujoco
 # make sure omesa is installed
+apt update
 apt install libosmesa6-dev libgl1-mesa-glx libglfw3 libglx-mesa0 libgl1-mesa-dri
 ```
 
 Then, you can install the `gflower` (which stands for Guided Flow Planner) 
 package by running the following commands:
 ```bash
-cd ./gflower
+cd ./offline_rl
 conda env create -f environment.yml
 
 conda activate gflower
-pip install -e .
 conda install -c conda-forge gcc
+pip install -e .
 
 # And then you should see the Error because the gym was installed in ver > 0.18 by the auto installation
 
