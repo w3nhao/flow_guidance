@@ -19,9 +19,11 @@ dependencies:
     - gymnasium==1.0.0
     - h5py==3.11.0
     - einops==0.8.0
-    - git+https://github.com/cython/cython.git@3.0.0a10
+    - cython==0.29.37
     - scipy==1.10.1
     - pot==0.9.5
     - tensorboard
     - tyro
     - typed-argument-parser==1.10.1
+    - gitpython
+    - scikit-video
